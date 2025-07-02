@@ -17,6 +17,8 @@ contract ERC4626VaultTest is ERC4626Test {
         token.approve(address(vault), INITIAL_SUPPLY);
         vault.deposit(INITIAL_SUPPLY, address(vault));
 
+        token.mint(address(vault), 1);
+
         ERC4626Test.init(address(vault));
     }
 }
