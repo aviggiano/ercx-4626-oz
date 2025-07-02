@@ -8,6 +8,7 @@ import {ERC4626Vault} from "../src/ERC4626Vault.sol";
 
 contract ERC4626VaultTest is ERC4626Test {
     uint256 public constant INITIAL_SUPPLY = 10e18;
+
     function setUp() public {
         ERC20Mock token = new ERC20Mock();
         ERC4626Vault vault = new ERC4626Vault(IERC20(address(token)), "Test Vault", "TV");
